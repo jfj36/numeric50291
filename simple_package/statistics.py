@@ -1,3 +1,4 @@
+import numpy as np
 ###
 ## Module for basic statistics
 ###
@@ -20,3 +21,26 @@
 ##
 ## 5. Also, do something and/or throw an exception/message if the
 ##    numpy and matplotlib packages are not installed.
+
+
+
+def calculate_statistics(data):
+    # Check if input is a numpy array
+    if not isinstance(data, np.ndarray):
+        # Check if input can be converted to a numpy array
+        try:
+            data = np.array(data)
+        except:
+            raise ValueError("Input must be a numpy array or convertible to a numpy array")
+
+    # Calculate mean, median, variance, and standard deviation
+    mean = np.mean(data)
+    median = np.median(data)
+    variance = np.var(data)
+    std_dev = np.std(data)
+
+    # Display the results
+    print("Mean:", mean)
+    print("Median:", median)
+    print("Variance:", variance)
+    print("Standard Deviation:", std_dev)
