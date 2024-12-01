@@ -23,7 +23,7 @@ def plot_histogram_with_mean_median(data):
     plt.hist(data, bins='auto')
     plt.xlabel('Value')
     plt.ylabel('Frequency')
-    plt.title('Histogram with Mean and Median')
+    plt.title('Histogram with Mean and Median markers')
 
     mean = np.mean(data)
     median = np.median(data)
